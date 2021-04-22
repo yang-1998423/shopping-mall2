@@ -1,0 +1,4 @@
+<cu-custom bgColor="bg-gradual-green">
+  <view slot="content">关于</view>
+</cu-custom>
+<text>pages/shoppingcart/home/home.wxml</text>

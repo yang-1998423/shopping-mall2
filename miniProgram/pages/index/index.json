@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "about": "/pages/about/home/home"
+    "about": "/pages/about/home/home",
+    "shoppingcart": "/pages/shoppingcart/home/home"
   }
 }

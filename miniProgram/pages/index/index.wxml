@@ -1,6 +1,5 @@
 <basics wx:if="{{PageCur=='basics'}}"></basics>
-<component wx:if="{{PageCur=='component'}}"></component>
-<plugin wx:if="{{PageCur=='plugin'}}"></plugin>
+<shoppingcart wx:if="{{PageCur=='shoppingcart'}}"></shoppingcart>
 <about wx:if="{{PageCur=='about'}}"></about>
 <view class="cu-bar tabbar bg-white shadow foot">
   <view class="action" bindtap="NavChange" data-cur="basics">
@@ -15,11 +14,11 @@
     </view>
     <view class="{{PageCur=='component'?'text-green':'text-gray'}}">组件</view>
   </view>
-  <view class="action" bindtap="NavChange" data-cur="plugin">
+  <view class="action" bindtap="NavChange" data-cur="shoppingcart">
     <view class='cuIcon-cu-image'>
-      <image src="/images/tabbar/plugin{{PageCur=='plugin'?'_cur':''}}.png"></image>
+      <image src="/images/tabbar/shoppingcart{{PageCur=='shoppingcart'?'_cur':''}}.png"></image>
     </view>
-    <view class="{{PageCur=='plugin'?'text-green':'text-gray'}}">扩展</view>
+    <view class="{{PageCur=='shoppingcart'?'text-green':'text-gray'}}">购物车</view>
   </view>
   <view class="action" bindtap="NavChange" data-cur="about">
     <view class='cuIcon-cu-image'>
