@@ -1,6 +1,23 @@
-
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+</cu-custom>
+<view class="div">
+  <h1 class="text1">欢迎使用  XXX商城</h1>
+  <p class="text2">立即登录，享受优质服务</p>
+</view>
 <view class="container">
-  <view class="userinfo">
-    <button bindtap="userLogin" class="logon-rights"> {{motto}} </button>
+  <view class="userinfor">
+    <view class="userinfo-avatar" bindtap="bindViewTap">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class="usermotto">
+      <text class="user-motto"></text>
+    </view>
   </view>
+  <form>
+      <view>
+            <button style="width:240px" type="primary" wx:if="{{canIUseGetUserProfile}}" bindtap="userLogin">
+              <text class="text">微信用户一键登录</text>
+            </button>
+      </view>
+  </form>
 </view>
