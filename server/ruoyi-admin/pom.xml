@@ -73,6 +73,12 @@
             <artifactId>ruoyi-generator</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.ruoyi</groupId>
+            <artifactId>wechat</artifactId>
+            <version>3.4.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>
