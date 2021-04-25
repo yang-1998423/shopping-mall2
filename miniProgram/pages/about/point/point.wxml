@@ -1,4 +1,7 @@
-<!--pages/signIn2/signIn2.wxml-->
+<view class="box" style="height:100%">
+<view>
+  <view class='navbar-title' style='top:30px'>我的积分</view>
+</view>
 <view class='sign-new'>
   <view class='in'>
     <view class='new-head'>
@@ -51,4 +54,5 @@
       </view>
     </view>
   </view>
+</view>
 
