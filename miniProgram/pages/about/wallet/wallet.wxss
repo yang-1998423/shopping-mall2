@@ -1,0 +1,98 @@
+/* pages/about/wallet/wallet.wxss */
+ 
+page {
+  display: block;
+  min-height: 100%;
+  background-color: rgb(245,245,245);
+}
+.user_head {
+    position: relative;
+    background: #fff;
+    padding: 20px 0;
+    font-size: 14px;
+    color: #ffffff;
+    background:#64bff1;
+ 
+}
+.user_img {
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+}
+ 
+.userinfo_name {
+    clear: both;
+    width: 100%;
+    padding-top: 10px;
+    color:#ffffff;
+    font-size:20px
+}
+ 
+.userinfo-avatar {
+    font-size:30px;
+    font-weight: bolder;
+    text-align: center;
+}
+ 
+.user_edit_con {
+    background: #fff;
+    margin-top:10px;
+}
+ 
+.user_edit_li_title {
+    height: 45px;
+    line-height: 45px;
+    padding: 0 15px;
+    border-bottom: 1px solid #f5f5f5;
+    border-bottom-color: #f5f5f5;
+    font-size:14px;
+ 
+}
+ 
+.picker_group {
+    height: 85rpx;
+    line-height: 85rpx;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-size: 30rpx;
+    color: #888;
+    border-bottom: 1rpx solid #efefef;
+  
+  }
+
+  .picker_group picker {
+    /* background-color: yellow; */
+    color: #64bff1;
+    height: 55rpx;
+    line-height: 55rpx;
+    margin: 0 2%;
+    padding: 0 2%;
+    border: 1rpx solid #4285c4;
+    border-radius: 30rpx;
+  }
+ 
+  .shouzhi {
+      color: #4285c4;
+      display:flex;
+      font-size: 40rpx;
+      align-items:center;
+      justify-content:center;
+  }
+
+  .color1 {
+    color: green;
+    display:flex;
+    font-size: 40rpx;
+    align-items:center;
+    justify-content:center;
+}
+
+  .color2 {
+      color: red;
+      display:flex;
+      font-size: 40rpx;
+      align-items:center;
+      justify-content:center;
+  }
+ 
