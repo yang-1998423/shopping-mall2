@@ -1,9 +1,10 @@
 {
   "pages": [
-    "pages/about/point/point",
+    
     "pages/index/index",
     "pages/logs/logs",
-    "pages/about/login/login"
+    "pages/about/login/login",
+    "pages/about/point/point"
   ],
   "window": {
     "backgroundTextStyle": "light",
