@@ -1,0 +1,114 @@
+/* miniProgram/pages/basics/home/home.wxss */
+/**搜索框**/
+.container-search{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    background-color: #f4f4f4;
+    position: fixed;
+    left: 0;
+    z-index: 100;
+  }
+  
+  .text-search{
+    flex-grow: 1;
+    background-color: #fff;
+    border: 2px solid green;
+    border-radius: 6px;
+    margin:10px;
+    text-align: left;
+    color: #959595;
+  }
+  
+  .searchIt{
+    padding: 5px 10px;
+    background-color: green;
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 4px;
+    
+  }
+
+ 
+  /**轮播导航**/
+  .categoryList{
+    width: 100%;
+    height: 350rpx;
+    margin-top: 150rpx;
+    
+  }
+  .category-info{
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    margin-top: 20rpx;
+    height: 150rpx;
+    width: 25%;
+  }
+  .category-image{
+    width: 95rpx;
+    height: 95rpx;
+  }
+  .category-text{
+    font-size: 25rpx;
+    width: 100%;
+    line-height: 30rpx
+  }
+  /**中间福利区**/
+  .title{
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight:bold;
+  }
+  .line_name{
+    margin-top: 3px;
+  }
+  .welfares{
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin:10px 15px 10px 15px;
+  }
+  .welfares-good{
+    height: 560rpx; 
+    width: 47%;
+    margin:0px auto;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    font-size: 24rpx;
+  }
+  .welfares-image{
+    width: 100%;
+    display: inline-block;
+    border: 1px #eee solid; 
+  }
+  .welfares-good .product-name{
+    color: #000;
+    height: 28px;
+    text-align:left;
+     margin: 0px 5px; 
+     margin-bottom: 5px; 
+  }
+  .product-price-wrap .product-price-new{
+    color: #e80080;
+    margin-left:5px;
+    font-weight:900;
+  }
+  .product-price-wrap .product-price-old{
+    color: #888;
+    text-decoration: line-through;
+    padding-left: 2px;
+  }
+  .product-price-wrap .discount{
+    position: absolute;
+    right: 5px;
+    background-color: #000;
+    color: #fff;
+  }

@@ -1,0 +1,58 @@
+<cu-custom bgColor="bg-gradual-green">
+  <view slot="content">首页</view>
+</cu-custom>
+
+<!--搜索框-->
+<view class="container-search">
+  <input class="text-search" maxlength="10" placeholder="请输入搜索内容" bindinput="onNameInput"/>
+  <text class="searchIt" bindtap="searchIt">搜索</text>
+</view>
+<!--轮播分类导航-->
+<view>
+  <swiper indicator-dots="true" 
+  indicator-color="rgba(228,228,228,1)" 
+  indicator-active-color="#FECA49" class="categoryList">
+  <block wx:for="{{categoryList}}" wx:key="item">
+  <swiper-item>
+  <block wx:for="{{item}}" wx:key="item">
+    <view class="category-info">
+      <navigator url="{{item.url}}" open-type="navigate" hover-class="other-navigator-hover">
+        <image src="{{item.src}}" 
+        class="category-image"></image>
+        <view class="category-text">{{item.name}}</view>
+      </navigator>
+    </view>
+  </block>
+  </swiper-item>
+  </block>
+  </swiper>
+</view>
+
+<!--中间商品展示-->
+<view class="welfare-container"> 
+  <view class="category-title">
+    <text class="title" >福利专场</text>
+    <view class="line_name">
+    </view>
+  </view>  
+  <scroll-view scroll-y="true">
+      <view class="welfares">
+         <block wx:for-items="{{goodsWelfareItems}}" wx:key="name">
+          <view class="welfares-good" catchtap="catchTapCategory" data-type="{{item.name}}" data-typeid="{{item.typeId}}">
+            <view>
+              <image src="{{item.imageurl}}" class="welfares-image" mode="widthFix"/> 
+            </view>
+            <view class="product-name">
+              {{item.name}}
+            </view>
+            <view class="product-price-wrap">
+              <p class="product-price-new">￥{{item.newprice}}</p>  
+              <p class="product-price-old">￥{{item.oldprice}}</p> 
+            
+            </view>
+            
+          </view>
+        </block> 
+      </view>
+  </scroll-view>  
+</view> 
