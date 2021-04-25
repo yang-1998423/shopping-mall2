@@ -41,12 +41,16 @@
   },
   "compileType": "miniprogram",
   "libVersion": "2.16.1",
-  "appid": "wx76d26d085ec02d4a",
-  "projectname": "miniprogram-2",
+  "appid": "wxa3dc6be5d735832a",
+  "projectname": "final-miniprogram",
   "debugOptions": {
     "hidedInDevtools": []
   },
   "scripts": {},
+  "staticServerOptions": {
+    "baseURL": "",
+    "servePath": ""
+  },
   "isGameTourist": false,
   "condition": {
     "search": {
