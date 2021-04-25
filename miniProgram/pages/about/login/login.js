@@ -3,7 +3,6 @@ let self;
 Page({
   data: {
     // motto: '获取成功返回',
-    motto: '获取用户权限',
     // flg : false,
     userInfo: {},
     hasUserInfo: false,
