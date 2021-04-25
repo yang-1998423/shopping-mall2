@@ -10,7 +10,7 @@ Page({
         cart_id: 1, //商品ID
         name: '特色黄山烧饼', //商品名称
         quantity: 1, //商品数量
-        option: [{
+        specs: [{
             value: '微辣； 5个/袋'
           },
           {
@@ -25,7 +25,7 @@ Page({
         cart_id: 2, //商品ID
         name: '香辣鸡腿堡', //商品名称
         quantity: 1, //商品数量
-        option: [{
+        specs: [{
             value: '微辣'
           },
           {
@@ -40,7 +40,7 @@ Page({
         cart_id: 3, //商品ID
         name: '特色鸡排', //商品名称
         quantity: 1, //商品数量
-        option: [{
+        specs: [{
             value: '微辣'
           },
           {
@@ -55,7 +55,7 @@ Page({
         cart_id: 4, //商品ID
         name: '烤肠', //商品名称
         quantity: 1, //商品数量
-        option: [{
+        specs: [{
             value: '微辣'
           },
           {
@@ -70,7 +70,7 @@ Page({
         cart_id: 5, //商品ID
         name: '休闲食品', //商品名称
         quantity: 1, //商品数量
-        option: [{
+        specs: [{
             value: '微辣'
           },
           {
@@ -85,7 +85,7 @@ Page({
         cart_id: 6, //商品ID
         name: '韩式盖浇', //商品名称
         quantity: 1, //商品数量
-        option: [{
+        specs: [{
             value: '微辣'
           },
           {
@@ -99,7 +99,7 @@ Page({
         cart_id: 7, //商品ID
         name: '生日蛋糕', //商品名称
         quantity: 1, //商品数量
-        option: [{
+        specs: [{
             value: '草莓'
           },
           {
@@ -110,13 +110,9 @@ Page({
         price: 99.8, //商品价格
         checks: false //是否选中
       }
-    ], //购物车数据
-    total_all_price: 0, //商品的总价格
-    all_shop: 0, //所选商品的id
-    shop_quantity: 0, //所选商品的数量
-    good_one: [], //单个商品的数据
-    checked: false, //是否为全选
-    shopData: null
+    ], 
+   
+  
 
   },
 
