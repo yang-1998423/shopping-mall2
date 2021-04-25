@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    dataSource: [
+    cartList: [
       {
         cart_id: 1, //商品ID
         name: '特色黄山烧饼', //商品名称
@@ -111,9 +111,6 @@ Page({
         checks: false //是否选中
       }
     ], 
-   
-  
-
   },
 
   /**
