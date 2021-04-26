@@ -1,15 +1,15 @@
-package com.ruoyi.category.mapper;
+package com.ruoyi.wechat.category.service;
 
 import java.util.List;
-import com.ruoyi.category.domain.Secondclass;
+import com.ruoyi.wechat.category.domain.Secondclass;
 
 /**
- * secondMapper接口
+ * secondService接口
  * 
  * @author ruoyi
  * @date 2021-04-25
  */
-public interface SecondclassMapper 
+public interface ISecondclassService 
 {
     /**
      * 查询second
@@ -44,18 +44,18 @@ public interface SecondclassMapper
     public int updateSecondclass(Secondclass secondclass);
 
     /**
-     * 删除second
+     * 批量删除second
+     * 
+     * @param ids 需要删除的secondID
+     * @return 结果
+     */
+    public int deleteSecondclassByIds(Long[] ids);
+
+    /**
+     * 删除second信息
      * 
      * @param id secondID
      * @return 结果
      */
     public int deleteSecondclassById(Long id);
-
-    /**
-     * 批量删除second
-     * 
-     * @param ids 需要删除的数据ID
-     * @return 结果
-     */
-    public int deleteSecondclassByIds(Long[] ids);
 }

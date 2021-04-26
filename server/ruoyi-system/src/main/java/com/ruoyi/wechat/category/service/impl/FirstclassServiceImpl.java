@@ -1,11 +1,11 @@
-package com.ruoyi.category.service.impl;
+package com.ruoyi.wechat.category.service.impl;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.ruoyi.category.mapper.FirstclassMapper;
-import com.ruoyi.category.domain.Firstclass;
-import com.ruoyi.category.service.IFirstclassService;
+import com.ruoyi.wechat.category.mapper.FirstclassMapper;
+import com.ruoyi.wechat.category.domain.Firstclass;
+import com.ruoyi.wechat.category.service.IFirstclassService;
 
 /**
  * myfnService业务层处理

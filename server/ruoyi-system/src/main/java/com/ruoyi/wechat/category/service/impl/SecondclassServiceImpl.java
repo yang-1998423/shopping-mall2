@@ -1,11 +1,11 @@
-package com.ruoyi.category.service.impl;
+package com.ruoyi.wechat.category.service.impl;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.ruoyi.category.mapper.SecondclassMapper;
-import com.ruoyi.category.domain.Secondclass;
-import com.ruoyi.category.service.ISecondclassService;
+import com.ruoyi.wechat.category.mapper.SecondclassMapper;
+import com.ruoyi.wechat.category.domain.Secondclass;
+import com.ruoyi.wechat.category.service.ISecondclassService;
 
 /**
  * secondService业务层处理

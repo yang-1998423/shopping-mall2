@@ -1,4 +1,4 @@
-package com.ruoyi.category.domain;
+package com.ruoyi.wechat.category.domain;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;

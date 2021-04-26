@@ -1,7 +1,7 @@
-package com.ruoyi.category.mapper;
+package com.ruoyi.wechat.category.mapper;
 
 import java.util.List;
-import com.ruoyi.category.domain.Firstclass;
+import com.ruoyi.wechat.category.domain.Firstclass;
 
 /**
  * myfnMapper接口
