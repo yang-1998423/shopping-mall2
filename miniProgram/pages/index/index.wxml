@@ -6,7 +6,7 @@
     <view class='cuIcon-cu-image'>
       <image src="/images/tabbar/basics{{PageCur=='basics'?'_cur':''}}.png"></image>
     </view>
-    <view class="{{PageCur=='basics'?'text-green':'text-gray'}}">元素</view>
+    <view class="{{PageCur=='basics'?'text-green':'text-gray'}}">首页</view>
   </view>
   <view class="action" bindtap="NavChange" data-cur="component">
     <view class='cuIcon-cu-image'>
