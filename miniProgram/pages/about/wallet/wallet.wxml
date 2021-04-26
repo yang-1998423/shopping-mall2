@@ -1,0 +1,53 @@
+<!--pages/about/wallet/wallet.wxml-->
+<view class="user_content">
+  <!--表头-->
+  <view class="user_head" style="position: relative; left: 0rpx; top: -10rpx">
+    <view class="user_img domain">
+      <view class="userinfo-avatar">余额</view>
+      <view class="userinfo_name">￥{{balance}}</view>
+    </view>
+  </view>
+  <view>
+    <text class="shouzhi" style="width: 750rpx; height: 38rpx; display: flex; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
+      收支明细
+    </text>
+  </view>
+  <view class="page">  
+    <view class="picker_group" style="width: 750rpx; height: 172rpx; display: flex; box-sizing: border-box; left: NaNrpx; top: NaNrpx"> 
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      {{array[index]}}
+    </view>
+  </picker>
+      <picker mode="date" value="{{date}}"  end="{{date2}}" bindchange="bindDateChange">  
+        <view class="picker">  
+          {{date}}  
+        </view>  
+      </picker>  
+      至  
+      <picker mode="date" value="{{date2}}" start="{{date}}" end="2050-01-01" bindchange="bindDateChange2">  
+        <view class="picker">  
+          {{date2}}  
+        </view>  
+      </picker>        
+    </view>  
+  </view> 
+  <view class="cu-list menu-avatar" wx:for="{{items}}">
+    <view class="cu-item">
+      <view class="content">
+        <view class="text-grey">
+          <text class="text-cut" style="width: 127rpx; height: 43rpx; display: block; box-sizing: border-box; top: 0rpx; position: relative; left: -66rpx">{{item.text}}</text>
+          <view class="{{item.cl}}" style="position: relative; left: 141rpx; top: 15rpx; width: 155rpx; height: 71rpx; display: block; box-sizing: border-box">{{item.money}}</view>
+        </view>
+        <view class="text-gray text-sm flex" style="width: 303rpx; height: 43rpx; display: flex; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
+          <text class="text-cut" style="width: 277rpx; height: 43rpx; display: block; box-sizing: border-box; top: 0rpx; position: relative; left: -90rpx">{{item.src}}</text>
+        </view>
+      </view>
+      <view class="action">
+        <view style="width: 99rpx; height: 75rpx; display: block; box-sizing: border-box; top: 8rpx; position: relative; left: -45rpx">
+          <view>{{item.time2}} </view>
+          {{item.time}}</view>
+      </view>
+    </view>
+  </view>
+</view>

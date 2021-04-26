@@ -4,6 +4,7 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/about/login/login",
+    "pages/about/wallet/wallet",
     "pages/about/point/point"
   ],
   "window": {
