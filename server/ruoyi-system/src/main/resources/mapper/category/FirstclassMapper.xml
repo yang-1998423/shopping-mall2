@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.category.mapper.FirstclassMapper">
+    
+    <resultMap type="Firstclass" id="FirstclassResult">
+        <result property="cateId"    column="cate_id"    />
+        <result property="cateName"    column="cate_name"    />
+    </resultMap>
+
+    <sql id="selectFirstclassVo">
+        select cate_id, cate_name from firstclass
+    </sql>
+
+    <select id="selectFirstclassList" parameterType="Firstclass" resultMap="FirstclassResult">
+        <include refid="selectFirstclassVo"/>
+        <where>  
+            <if test="cateName != null  and cateName != ''"> and cate_name like concat('%', #{cateName}, '%')</if>
+        </where>
+    </select>
+    
+    <select id="selectFirstclassById" parameterType="Long" resultMap="FirstclassResult">
+        <include refid="selectFirstclassVo"/>
+        where cate_id = #{cateId}
+    </select>
+        
+    <insert id="insertFirstclass" parameterType="Firstclass">
+        insert into firstclass
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="cateId != null">cate_id,</if>
+            <if test="cateName != null">cate_name,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="cateId != null">#{cateId},</if>
+            <if test="cateName != null">#{cateName},</if>
+         </trim>
+    </insert>
+
+    <update id="updateFirstclass" parameterType="Firstclass">
+        update firstclass
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="cateName != null">cate_name = #{cateName},</if>
+        </trim>
+        where cate_id = #{cateId}
+    </update>
+
+    <delete id="deleteFirstclassById" parameterType="Long">
+        delete from firstclass where cate_id = #{cateId}
+    </delete>
+
+    <delete id="deleteFirstclassByIds" parameterType="String">
+        delete from firstclass where cate_id in 
+        <foreach item="cateId" collection="array" open="(" separator="," close=")">
+            #{cateId}
+        </foreach>
+    </delete>
+</mapper>
