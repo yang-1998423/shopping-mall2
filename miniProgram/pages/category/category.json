@@ -1,8 +1,4 @@
 {
-  "component": true,
-  "usingComponents": {
-    "about": "/pages/about/home/home",
-    "shoppingcart": "/pages/shoppingcart/home/home",
-    "category":"/pages/category/category"
-  }
+  "component": true
+
 }
