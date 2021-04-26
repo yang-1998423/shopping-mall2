@@ -5,7 +5,8 @@
     "pages/logs/logs",
     "pages/about/login/login",
     "pages/about/wallet/wallet",
-    "pages/about/point/point"
+    "pages/about/point/point",
+    "pages/about/personinfo/personinfo"
   ],
   "window": {
     "backgroundTextStyle": "light",
