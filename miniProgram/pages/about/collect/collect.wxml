@@ -1,0 +1,23 @@
+<!--pages/collect/collect.wxml-->
+<cu-custom bgColor="bg-gradual-green">
+  <view slot="content">收藏</view>
+</cu-custom>
+<view class="cu-card article {{isCard?'no-card':''}}" wx:if="{{collectlist.length>0}}">
+  <view class="cu-item shadow">
+    <block wx:for="{{collectlist}}" >
+      <view class="margin-top">
+      </view>
+      <view class="content">
+        <image src="{{item.img}}" mode="aspectFill"></image>
+        <view class="desc">
+          <view>{{item.goodsName}}</view>
+          <view>
+               <view class="cu-tag  light round fl">{{item.price}}</view>
+               <view class="fr text-red {{item.confirm=='ture'?'cuIcon-favorfill ':'cuIcon-favor lg '}}" style="font-size:20px;"  data-index='{{index}}' bindtap="changecolor"></view>
+          </view>
+        </view>
+      </view>
+      <!-- <view class="padding solid{{size?'s':''}}-bottom margin-top"></view> -->
+    </block>
+  </view>
+</view>
