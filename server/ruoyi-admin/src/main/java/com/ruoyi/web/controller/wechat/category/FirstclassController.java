@@ -36,10 +36,11 @@ public class FirstclassController extends BaseController
     /**
      * 查询myfn列表
      */
-//    @PreAuthorize("@ss.hasPermi('mydemo:firstclass:list')")
+    @PreAuthorize("@ss.hasPermi('mydemo:firstclass:list') or @ss.hasRole('wechat')")
     @GetMapping("/list")
     public TableDataInfo list(Firstclass firstclass)
     {
+        System.out.println("进入查询列表");
         startPage();
         List<Firstclass> list = firstclassService.selectFirstclassList(firstclass);
         return getDataTable(list);

@@ -1,4 +1,5 @@
 // const app = getApp()
+const network = require('../../utils/network.js')
 Component({
   data: {
     cateItems:[
@@ -11,39 +12,39 @@ Component({
     curIndex:0,
     PageCur:"category"
   },
-  attached() {
-      var that=this
-     wx.request({
-       url: 'http://localhost:8080/mydemo/firstclass/list',
-       method:"GET",
-       success:function(res){
-         that.setData({
-           cateItems:res.data.rows,
-         }) 
-         console.log(that.data.cateItems)
-       }
-     })
-     wx.request({
-       url: 'http://localhost:8080/mydemo/secondclass/list',
-       method:"GET",
-       data:{
-         "cateid":that.data.curNav
-       },
-       success:function(res){
-         that.setData({
-           children:res.data.rows
-         }),
-         that.data.list=[]
-         wx:for(var i=0;i<that.data.children.length;i++){
-           if(1==that.data.children[i].cateId){
-             that.setData({
-               list:that.data.list.concat(that.data.children[i])
-             })
-           }
-         }
-       }
-     })
-  },
+  // attached() {
+  //    var that=this
+  //    wx.request({
+  //      url: 'http://localhost:8080/mydemo/firstclass/list',
+  //      method:"GET",
+  //      success:function(res){
+  //        that.setData({
+  //          cateItems:res.data.rows,
+  //        }) 
+  //        console.log(that.data.cateItems)
+  //      }
+  //    })
+  //    wx.request({
+  //      url: 'http://localhost:8080/mydemo/secondclass/list',
+  //      method:"GET",
+  //      data:{
+  //        "cateid":that.data.curNav
+  //      },
+  //      success:function(res){
+  //        that.setData({
+  //          children:res.data.rows
+  //        }),
+  //        that.data.list=[]
+  //        wx:for(var i=0;i<that.data.children.length;i++){
+  //          if(1==that.data.children[i].cateId){
+  //            that.setData({
+  //              list:that.data.list.concat(that.data.children[i])
+  //            })
+  //          }
+  //        }
+  //      }
+  //    })
+  // },
   methods:{
     switchRightTab:function(e){
       let id = e.target.dataset.id,index=e.target.dataset.index;
@@ -69,5 +70,31 @@ Component({
         curIndex:index
       })
     },
+  },
+  attached: function() {
+    var that=this
+    network.request('mydemo/firstclass/list', {}, function(res) {
+      console.log(res.rows)
+      that.setData({
+           cateItems:res.rows,
+      }) 
+      console.log(res)
+    }, 'GET', true);
+    network.request('mydemo/secondclass/list', {}, function(res) {
+      console.log(res.rows)
+      that.setData({
+        children:res.rows,
+      }) ,
+      that.data.list=[]
+      wx:for(var i=0;i<that.data.children.length;i++){
+        if(1==that.data.children[i].cateId){
+          that.setData({
+            list:that.data.list.concat(that.data.children[i])
+            })
+          }
+      }
+      console.log(res)
+    }, 'GET', true);
   }
+  
 })

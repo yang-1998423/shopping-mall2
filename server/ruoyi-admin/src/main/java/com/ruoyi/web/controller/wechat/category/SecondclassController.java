@@ -36,7 +36,7 @@ public class SecondclassController extends BaseController
     /**
      * 查询second列表
      */
-//    @PreAuthorize("@ss.hasPermi('mydemo:secondclass:list')")
+    @PreAuthorize("@ss.hasPermi('mydemo:secondclass:list') or @ss.hasRole('wechat')")
     @GetMapping("/list")
     public TableDataInfo list(Secondclass secondclass)
     {
