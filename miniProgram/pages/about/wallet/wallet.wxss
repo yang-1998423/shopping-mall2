@@ -11,8 +11,7 @@ page {
     padding: 20px 0;
     font-size: 14px;
     color: #ffffff;
-    background:#64bff1;
- 
+    background: linear-gradient(45deg, #0081ff, #1cbbb4);
 }
 .user_img {
     margin: 0 auto;
