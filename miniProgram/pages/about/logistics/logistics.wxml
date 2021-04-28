@@ -1,0 +1,186 @@
+<cu-custom bgColor="bg-green" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">物流信息</view>
+</cu-custom>
+
+
+<view class="cu-list card-menu 2 margin-bottom-x2 shadow-lg radius">
+  <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action">
+      <text class="cuIcon-title text-orange "> </text>中通快递  1234567891011
+    </view>
+    <view class="cu-list grid">
+      <view class="cu-item">
+        <text class="cuIcon-copy lg text-grey"></text>
+      </view>
+    </view>
+
+  </view>
+  <view class="cu-timeline">
+  <view class="cu-item">
+    <view class="content shadow-blur">
+      <view class="margin-top">【收货地址】河南省新乡市牧野区   河南师范大学东区   137****0000</view>
+    </view>
+  </view>
+ </view>
+
+  <view class="cu-timeline">
+    <view class="cu-time">04-24</view>
+  <view class="cu-item">
+    <view class="content">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-cyan">已签收</view>
+        <view class="cu-tag line-cyan">17:46</view>
+      </view>
+      <view class="margin-top">您已在师大东区四号楼负一层菜鸟驿站完成取件，感谢使用菜鸟驿站，期待再次为您服务。</view>
+    </view>
+  </view>
+ </view>
+
+<view class="cu-timeline">
+  <view class="cu-item">
+    <view class="content">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-cyan">待取件</view>
+        <view class="cu-tag line-cyan">16:03</view>
+      </view>
+      <view class="margin-top">您的快件已由师大东区四号楼负一层菜鸟驿站代收。请凭取货码及时取件（查询方式：短信/物流详情页）</view>
+    </view>
+  </view>
+</view>
+
+<view class="cu-timeline">
+  <view class="cu-item">
+    <view class="content shadow-blur">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-cyan">派送中</view>
+        <view class="cu-tag line-cyan">14:20</view>
+      </view>
+      <view class="margin-top">【新乡市】新乡市区三部派件员：张三  电话：12345678910当前正在为您派件</view>
+    </view>
+  </view>
+ </view>
+
+<view class="cu-timeline">
+  <view class="cu-item">
+    <view class="content shadow-blur">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-cyan">运输中</view>
+        <view class="cu-tag line-cyan">14:19</view>
+      </view>
+      <view class="margin-top">到【新乡市区三部】</view>
+    </view>
+  </view>
+ </view>
+
+<view class="cu-timeline">
+  <view class="cu-item">
+    <view class="content shadow-blur">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-cyan">运输中</view>
+        <view class="cu-tag line-cyan">10:27</view>
+      </view>
+      <view class="margin-top">【郑州转运中心】，正发往【新乡市区三部】</view>
+    </view>
+  </view>
+ </view>
+
+<view class="cu-timeline">
+  <view class="cu-item">
+    <view class="content shadow-blur">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-cyan">运输中</view>
+        <view class="cu-tag line-cyan">09:55</view>
+      </view>
+      <view class="margin-top">到【郑州转运中心】</view>
+    </view>
+  </view>
+ </view>
+
+<view class="cu-timeline">
+  <view class="cu-time">04-23</view>
+  <view class="cu-item">
+    <view class="content shadow-blur">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-cyan">运输中</view>
+        <view class="cu-tag line-cyan">01：51</view>
+      </view>
+      <view class="margin-top">【济南转运中心】，正发往【郑州转运中心】</view>
+    </view>
+  </view>
+ </view>
+
+<view class="cu-timeline">
+  <view class="cu-item">
+    <view class="content shadow-blur">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-cyan">运输中</view>
+        <view class="cu-tag line-cyan">01:48</view>
+      </view>
+      <view class="margin-top">到【济南转运中心】</view>
+    </view>
+  </view>
+ </view>
+
+<view class="cu-timeline">
+  <view class="cu-time">04-22</view>
+  <view class="cu-item">
+    <view class="content shadow-blur">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-cyan">运输中</view>
+        <view class="cu-tag line-cyan">23:05</view>
+      </view>
+      <view class="margin-top">到【聊城】</view>
+    </view>
+  </view>
+ </view>
+
+ <view class="cu-timeline">
+  <view class="cu-item">
+    <view class="content shadow-blur">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-cyan">已揽收</view>
+        <view class="cu-tag line-cyan">13:10</view>
+      </view>
+      <view class="margin-top">揽收成功</view>
+    </view>
+  </view>
+ </view>
+
+ <view class="cu-timeline">
+  <view class="cu-item">
+    <view class="content shadow-blur">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-cyan">已发货</view>
+        <view class="cu-tag line-cyan">11:55</view>
+      </view>
+      <view class="margin-top">包裹正在等待揽收</view>
+    </view>
+  </view>
+ </view>
+
+<view class="cu-timeline">
+  <view class="cu-item">
+    <view class="content shadow-blur">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-cyan">已揽件</view>
+        <view class="cu-tag line-cyan">11:54</view>
+      </view>
+      <view class="margin-top">菜鸟裹裹快递员已取包裹，即将开始运输</view>
+    </view>
+  </view>
+ </view>
+
+<view class="cu-timeline">
+  <view class="cu-time">04-21</view>
+  <view class="cu-item">
+    <view class="content">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-cyan">已下单</view>
+        <view class="cu-tag line-cyan">21:32</view>
+      </view>
+      <view class="margin-top">商品已经下单</view>
+    </view>
+  </view>
+</view>
+</view>
