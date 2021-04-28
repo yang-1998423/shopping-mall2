@@ -1,5 +1,6 @@
 package com.ruoyi.common.core.domain.entity;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import javax.validation.constraints.Email;
@@ -84,7 +85,7 @@ public class SysUser extends BaseEntity
     private SysDept dept;
 
     /** 角色对象 */
-    private List<SysRole> roles;
+    private List<SysRole> roles = new ArrayList<>();
 
     /** 角色组 */
     private Long[] roleIds;

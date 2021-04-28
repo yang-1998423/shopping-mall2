@@ -1,0 +1,27 @@
+.cu-form-group .title {
+  min-width: calc(4em + 30rpx);
+}
+.box {  
+  margin: 5rpx 0; 
+}
+
+.box view.cu-bar {
+  margin-top: 10rpx; 
+}
+
+
+
+.user{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+  image{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 20%;
+  border: 2rpx solid black;
+  } 
+
+
+  

@@ -4,7 +4,7 @@
 <scroll-view scroll-y class="scrollPage">
   <view class="UCenter-bg ">
     <view class="text-xl">
-        <navigator class="content" url="/pages/about/edit/edit" hover-class="none">
+        <navigator class="content" url="/pages/about/personinfo/personinfo" hover-class="none">
           <image src="/images/tabbar/headf.png" class="png" mode="widthFix"></image>
         </navigator>
         <text class="text-df" style="font-size:14px">昵称</text>
@@ -62,6 +62,11 @@
       </navigator>
     </view>
     
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/about/point/point" hover-class="none">
+        <text class="text-grey">我的积分</text>
+      </navigator>
+    </view>
   </view>
   <view class="cu-tabbar-height"></view>
 </scroll-view>

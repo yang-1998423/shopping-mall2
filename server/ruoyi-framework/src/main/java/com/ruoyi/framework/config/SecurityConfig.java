@@ -97,7 +97,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
                 // 过滤请求
                 .authorizeRequests()
                 // 对于登录login 验证码captchaImage 允许匿名访问
-                .antMatchers("/login", "/captchaImage", "/wechat/getUserInfo").anonymous()
+                .antMatchers("/login", "/captchaImage", "/wechat/login").anonymous()
                 .antMatchers(
                         HttpMethod.GET,
                         "/*.html",

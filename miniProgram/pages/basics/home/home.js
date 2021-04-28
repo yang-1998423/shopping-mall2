@@ -1,4 +1,6 @@
 // miniProgram/pages/basics/home/home.js
+
+const network = require('../../../utils/network.js')
 Component({
 
     /**
@@ -122,15 +124,24 @@ Component({
         var that = this;  
         //加载福利专场
         // that.newGoodsShow();
-
     },
-
+    methods: {
+      searchIt(e) {
+        
+      }
+    },
     NavChange(e) {
       this.setData({
         PageCur: e.currentTarget.dataset.cur
       })
     },
-
-
+    attached: function() {
+      network.request('wechat/test', {}, function(data) {
+        console.log(data)
+      }, 'post', true);
+      network.request('wechat/test', {}, function(data) {
+        console.log(data)
+      }, 'post', true);
+    }
     
 })
