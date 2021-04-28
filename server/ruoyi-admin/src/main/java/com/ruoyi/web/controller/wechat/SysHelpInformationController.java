@@ -21,9 +21,9 @@ import com.ruoyi.common.utils.poi.ExcelUtil;
 import com.ruoyi.common.core.page.TableDataInfo;
 
 /**
- * 常见问题解答Controller
+ * 常见问题的解答Controller
  * 
- * @author yan
+ * @author ruoyi
  * @date 2021-04-28
  */
 @RestController
@@ -34,7 +34,7 @@ public class SysHelpInformationController extends BaseController
     private ISysHelpInformationService sysHelpInformationService;
 
     /**
-     * 查询常见问题解答列表
+     * 查询常见问题的解答列表
      */
     @PreAuthorize("@ss.hasPermi('system:information:list')")
     @GetMapping("/list")
@@ -46,20 +46,20 @@ public class SysHelpInformationController extends BaseController
     }
 
     /**
-     * 导出常见问题解答列表
+     * 导出常见问题的解答列表
      */
     @PreAuthorize("@ss.hasPermi('system:information:export')")
-    @Log(title = "常见问题解答", businessType = BusinessType.EXPORT)
+    @Log(title = "常见问题的解答", businessType = BusinessType.EXPORT)
     @GetMapping("/export")
     public AjaxResult export(SysHelpInformation sysHelpInformation)
     {
         List<SysHelpInformation> list = sysHelpInformationService.selectSysHelpInformationList(sysHelpInformation);
         ExcelUtil<SysHelpInformation> util = new ExcelUtil<SysHelpInformation>(SysHelpInformation.class);
-        return util.exportExcel(list, "常见问题解答数据");
+        return util.exportExcel(list, "常见问题的解答数据");
     }
 
     /**
-     * 获取常见问题解答详细信息
+     * 获取常见问题的解答详细信息
      */
     @PreAuthorize("@ss.hasPermi('system:information:query')")
     @GetMapping(value = "/{helpInformationId}")
@@ -69,10 +69,10 @@ public class SysHelpInformationController extends BaseController
     }
 
     /**
-     * 新增常见问题解答
+     * 新增常见问题的解答
      */
     @PreAuthorize("@ss.hasPermi('system:information:add')")
-    @Log(title = "常见问题解答", businessType = BusinessType.INSERT)
+    @Log(title = "常见问题的解答", businessType = BusinessType.INSERT)
     @PostMapping
     public AjaxResult add(@RequestBody SysHelpInformation sysHelpInformation)
     {
@@ -80,10 +80,10 @@ public class SysHelpInformationController extends BaseController
     }
 
     /**
-     * 修改常见问题解答
+     * 修改常见问题的解答
      */
     @PreAuthorize("@ss.hasPermi('system:information:edit')")
-    @Log(title = "常见问题解答", businessType = BusinessType.UPDATE)
+    @Log(title = "常见问题的解答", businessType = BusinessType.UPDATE)
     @PutMapping
     public AjaxResult edit(@RequestBody SysHelpInformation sysHelpInformation)
     {
@@ -91,10 +91,10 @@ public class SysHelpInformationController extends BaseController
     }
 
     /**
-     * 删除常见问题解答
+     * 删除常见问题的解答
      */
     @PreAuthorize("@ss.hasPermi('system:information:remove')")
-    @Log(title = "常见问题解答", businessType = BusinessType.DELETE)
+    @Log(title = "常见问题的解答", businessType = BusinessType.DELETE)
 	@DeleteMapping("/{helpInformationIds}")
     public AjaxResult remove(@PathVariable Long[] helpInformationIds)
     {

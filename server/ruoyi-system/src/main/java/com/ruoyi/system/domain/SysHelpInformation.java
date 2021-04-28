@@ -6,9 +6,9 @@ import com.ruoyi.common.annotation.Excel;
 import com.ruoyi.common.core.domain.BaseEntity;
 
 /**
- * 常见问题解答对象 sys_help_information
+ * 常见问题的解答对象 sys_help_information
  * 
- * @author yan
+ * @author ruoyi
  * @date 2021-04-28
  */
 public class SysHelpInformation extends BaseEntity

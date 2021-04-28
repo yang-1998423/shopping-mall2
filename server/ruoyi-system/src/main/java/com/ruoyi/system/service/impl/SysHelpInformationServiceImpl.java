@@ -9,9 +9,9 @@ import com.ruoyi.system.domain.SysHelpInformation;
 import com.ruoyi.system.service.ISysHelpInformationService;
 
 /**
- * 常见问题解答Service业务层处理
+ * 常见问题的解答Service业务层处理
  * 
- * @author yan
+ * @author ruoyi
  * @date 2021-04-28
  */
 @Service
@@ -21,10 +21,10 @@ public class SysHelpInformationServiceImpl implements ISysHelpInformationService
     private SysHelpInformationMapper sysHelpInformationMapper;
 
     /**
-     * 查询常见问题解答
+     * 查询常见问题的解答
      * 
-     * @param helpInformationId 常见问题解答ID
-     * @return 常见问题解答
+     * @param helpInformationId 常见问题的解答ID
+     * @return 常见问题的解答
      */
     @Override
     public SysHelpInformation selectSysHelpInformationById(Long helpInformationId)
@@ -33,10 +33,10 @@ public class SysHelpInformationServiceImpl implements ISysHelpInformationService
     }
 
     /**
-     * 查询常见问题解答列表
+     * 查询常见问题的解答列表
      * 
-     * @param sysHelpInformation 常见问题解答
-     * @return 常见问题解答
+     * @param sysHelpInformation 常见问题的解答
+     * @return 常见问题的解答
      */
     @Override
     public List<SysHelpInformation> selectSysHelpInformationList(SysHelpInformation sysHelpInformation)
@@ -45,9 +45,9 @@ public class SysHelpInformationServiceImpl implements ISysHelpInformationService
     }
 
     /**
-     * 新增常见问题解答
+     * 新增常见问题的解答
      * 
-     * @param sysHelpInformation 常见问题解答
+     * @param sysHelpInformation 常见问题的解答
      * @return 结果
      */
     @Override
@@ -58,9 +58,9 @@ public class SysHelpInformationServiceImpl implements ISysHelpInformationService
     }
 
     /**
-     * 修改常见问题解答
+     * 修改常见问题的解答
      * 
-     * @param sysHelpInformation 常见问题解答
+     * @param sysHelpInformation 常见问题的解答
      * @return 结果
      */
     @Override
@@ -70,9 +70,9 @@ public class SysHelpInformationServiceImpl implements ISysHelpInformationService
     }
 
     /**
-     * 批量删除常见问题解答
+     * 批量删除常见问题的解答
      * 
-     * @param helpInformationIds 需要删除的常见问题解答ID
+     * @param helpInformationIds 需要删除的常见问题的解答ID
      * @return 结果
      */
     @Override
@@ -82,9 +82,9 @@ public class SysHelpInformationServiceImpl implements ISysHelpInformationService
     }
 
     /**
-     * 删除常见问题解答信息
+     * 删除常见问题的解答信息
      * 
-     * @param helpInformationId 常见问题解答ID
+     * @param helpInformationId 常见问题的解答ID
      * @return 结果
      */
     @Override
