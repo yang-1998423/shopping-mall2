@@ -85,4 +85,17 @@ public class SysLoginService
         // 生成token
         return tokenService.createToken(loginUser);
     }
+
+    public String wechatLogin(String username, String password)
+    {
+        // 用户验证，该方法会去调用UserDetailsServiceImpl.loadUserByUsername
+        Authentication authentication = authenticationManager
+                    .authenticate(new UsernamePasswordAuthenticationToken(username, password));
+
+        AsyncManager.me().execute(AsyncFactory.recordLogininfor(username, Constants.LOGIN_SUCCESS, MessageUtils.message("user.login.success")));
+
+        LoginUser loginUser = (LoginUser) authentication.getPrincipal();
+        // 生成token
+        return tokenService.createToken(loginUser);
+    }
 }
