@@ -4,7 +4,7 @@
     "pages/about/login/login",
     "pages/about/wallet/wallet",
     "pages/about/point/point",
-    "pages/about/logistics/logistics"
+    "pages/about/logistics/logistics",
     "pages/about/personinfo/personinfo",
     "pages/about/collect/collect"
   ],
