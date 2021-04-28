@@ -4,7 +4,8 @@
     "pages/about/login/login",
     "pages/about/wallet/wallet",
     "pages/about/point/point",
-    "pages/about/personinfo/personinfo"
+    "pages/about/personinfo/personinfo",
+    "pages/about/collect/collect"
   ],
   "window": {
     "backgroundTextStyle": "light",
