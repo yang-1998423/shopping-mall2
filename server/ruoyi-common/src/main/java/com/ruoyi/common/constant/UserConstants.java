@@ -60,4 +60,7 @@ public class UserConstants
     /** 校验返回结果码 */
     public final static String UNIQUE = "0";
     public final static String NOT_UNIQUE = "1";
+
+    /** 微信小程序用户默认密码 */
+    public final static String WECHAT_USER_DEFAULT_PASSWORD = "WECHAT_USER_DEFAULT_PASSWORD";
 }
