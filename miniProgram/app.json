@@ -6,7 +6,8 @@
     "pages/about/point/point",
     "pages/about/logistics/logistics",
     "pages/about/personinfo/personinfo",
-    "pages/about/collect/collect"
+    "pages/about/collect/collect",
+    "pages/basics/search/search"
   ],
   "window": {
     "backgroundTextStyle": "light",
