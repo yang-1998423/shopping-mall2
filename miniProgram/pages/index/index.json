@@ -2,6 +2,7 @@
   "usingComponents": {
     "about": "/pages/about/home/home",
     "shoppingcart": "/pages/shoppingcart/home/home",
-    "basics": "/pages/basics/home/home"
+    "basics": "/pages/basics/home/home",
+    "category":"/pages/category/category"
   }
 }
