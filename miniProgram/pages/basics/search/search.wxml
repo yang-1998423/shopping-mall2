@@ -1,0 +1,35 @@
+<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/sylb2244.jpg" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">搜索结果</view>
+</cu-custom>
+<view class="cu-bar bg-white search fixed" style="top:{{CustomBar}}px;">
+  <view class="search-form round">
+    <text class="cuIcon-search"></text>
+    <input type="text" placeholder="输入搜索的关键词" confirm-type="search"></input>
+  </view>
+  <view class="action">
+    <button class="cu-btn bg-gradual-green shadow-blur round"
+      style="width: 148rpx; height: 64rpx; display: flex; box-sizing: border-box; left: 0rpx; top: 0rpx">搜索</button>
+  </view>
+</view>
+<view>
+  <scroll-view class="scrol_view_style" scroll-x="{{false}}" scroll-y="{{true}}" >
+    <view wx:for-items="{{cartList}}" class="list_item_style" wx:key="cart_id" >
+      <checkbox-group bindchange="checkboxChange" style="height:100%" data-index="{{index}}" data-checks="{{item.checks}}">
+        <view class="carts_box" style="width: 750rpx; height: 370rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">
+          <image src="{{item.image}}" class="good_main_image"></image>
+          <view class="cart_content_right" style="width: 345rpx; height: 329rpx; display: block; box-sizing: border-box; left: 385rpx; top: -286rpx; position: relative">
+            <text class="item_good_title">{{item.name}}</text>
+            <view class="price_back_view" style="position: relative; left: 0rpx; top: 33rpx; width: 345rpx; height: 237rpx; display: block; box-sizing: border-box">
+              <text class="item_good_introduction" style="position: relative; left: 0rpx; top: 6rpx">商品介绍:
+                {{item.introduct}}</text>
+              <text class='price' style="color: #ff5d08; font-size: 30rpx">
+                价格: {{item.option[index].value}}</text>
+              <text class="right_list_item_price">¥ {{item.price}}</text>
+            </view>
+          </view>
+        </view>
+      </checkbox-group>
+    </view>
+  </scroll-view>
+</view>
