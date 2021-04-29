@@ -127,7 +127,9 @@ Component({
     },
     methods: {
       searchIt(e) {
-        
+        wx.navigateTo({
+          url:"../basics/search/search"
+        })
       }
     },
     NavChange(e) {
@@ -143,5 +145,5 @@ Component({
         console.log(data)
       }, 'post', true);
     }
-    
+
 })
