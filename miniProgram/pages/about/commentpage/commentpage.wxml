@@ -1,0 +1,51 @@
+<!--pages/category/commentpage/commentpage.wxml-->
+
+  <cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content">宝贝评价</view>
+  </cu-custom>
+<!-- 判断列表是否存在值 -->
+<view class="cu-card dynamic {{isCard?'no-card':''}}" wx:if="{{commentList.length>0}}">
+  <view class="cu-item shadow">
+    <block wx:for="{{commentList}}" wx:for-item="item">
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+        <view class="cu-avatar round lg" style="background-image:url({{item.imghead}});"></view>
+        <view class="content flex-sub">
+          <view>{{item.userName}}</view>
+          <view class="text-gray text-sm flex justify-between">
+            尺码：{{item.size}} | 颜色：{{item.color}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="text-content">
+      {{item.text}}
+      <!-- 原来的 -->
+    <!-- </view><view class="container">
+      <view wx:for="{{item.imggoods}}" wx:for-item="item1" class="previewimg">
+        <image src="{{item1}}"  data-src="{{item1}}" bindtap="previewImage"></image>
+      </view>
+    </view> -->
+    </view>
+
+  <view class="bg-white padding">
+    <view class="grid col-3 grid-square">
+      <view class="bg-img"wx:for="{{item.imggoods}}" wx:for-item="item2">
+        <image src="{{item2}}"  data-src="{{item2}}" bindtap="previewImage"></image>
+      </view>
+    </view>
+  </view>
+
+  <!-- <view class="bg-white padding">
+    <view class="grid col-3 margin-bottom text-center" wx:for="1" wx:key>
+      <view class="padding" wx:for="{{3*2}}">
+          222
+      </view>
+    </view>
+  </view> -->
+
+  
+  </block>
+  </view>
+</view>

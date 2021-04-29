@@ -1,6 +1,7 @@
 <basics wx:if="{{PageCur=='basics'}}"></basics>
 <shoppingcart wx:if="{{PageCur=='shoppingcart'}}"></shoppingcart>
 <about wx:if="{{PageCur=='about'}}"></about>
+<category wx:if="{{PageCur=='category'}}"></category>
 <view class="cu-bar tabbar bg-white shadow foot">
   <view class="action" bindtap="NavChange" data-cur="basics">
     <view class='cuIcon-cu-image'>
@@ -8,11 +9,11 @@
     </view>
     <view class="{{PageCur=='basics'?'text-green':'text-gray'}}">首页</view>
   </view>
-  <view class="action" bindtap="NavChange" data-cur="component">
+  <view class="action" bindtap="NavChange" data-cur="category">
     <view class='cuIcon-cu-image'>
-      <image src="/images/tabbar/component{{PageCur=='component'?'_cur':''}}.png"></image>
+      <image src="/images/tabbar/component{{PageCur=='category'?'_cur':''}}.png"></image>
     </view>
-    <view class="{{PageCur=='component'?'text-green':'text-gray'}}">组件</view>
+    <view class="{{PageCur=='component'?'text-green':'text-gray'}}">分类</view>
   </view>
   <view class="action" bindtap="NavChange" data-cur="shoppingcart">
     <view class='cuIcon-cu-image'>
