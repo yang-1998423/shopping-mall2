@@ -1,0 +1,121 @@
+<!--pages/goods/goods.wxml-->
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">商品详情</view></cu-custom>
+<!-- 轮播图 -->
+<view>
+  <swiper class="screen-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+    <swiper-item wx:for="{{goods.swiperList}}" wx:key>
+      <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+      <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
+    </swiper-item>
+  </swiper>
+
+  <!-- 价格 -->
+  <view class="goods-info" >
+    <view class="flex">
+        <view class="text-xxl padding"><text class="text-price text-red">{{goods.goods_price}}</text></view>
+        <view class="padding" style="text-decoration:line-through;"><text class="text-price">{{goods.goods_originl_price}}</text></view> 
+      </view>
+      <view class="basis-lg margin-xs padding-sm radius">
+         <text class="text-black text-bold ">2021新款夏装法式复古裙短袖过膝流行裙子气质显瘦碎花雪纺连衣裙{{goods_description}}</text>
+      </view>
+  </view>
+  <view class="goods-info"> 
+    <view class="flex flex-wrap" >
+      <view class="chesse" bindtap="switchAttrPop">
+        <text class="text-gray">请选择</text><text class="text-right padding：20px">规格选择及数量</text>
+      </view>
+      <view class="chesse">
+        <text class="text-gray">参数</text><text class="text-right padding：20px">品牌 闭合方式...</text>
+      </view>
+    </view>
+  </view>
+  <view class="goods-info">
+      <view class="goods_detail" bindtap="switchAttrPop" >
+        <text class="text-right padding：20px" >宝贝评价</text>
+      </view>
+  </view>
+  <view class="goods-infoend">   
+        <view class="goods_detail"><text class="goods_detail" >商品详情</text></view>
+        <view>
+          <block wx:for="{{goods.goods_detail_urls}}" wx:key>
+            <image src="{{item}}"></image>
+          </block>
+      </view>
+  </view>
+</view>
+<!-- 底部按钮 -->
+<view class="bottom-btn">
+  <view class="cu-bar bg-white tabbar border shop">
+    <button class="action" open-type="contact">
+      <view class="cuIcon-service text-green">
+        <view class="cu-tag badge"></view>
+      </view>
+      客服
+    </button>
+    <view class="action text-orange">
+      <view class="cuIcon-favorfill"></view> 已收藏
+    </view>
+    <view class="action">
+      <view class="cuIcon-cart">
+        <view class="cu-tag badge">99</view>
+      </view>
+      购物车
+    </view>
+      <view class="bg-orange submit" bindtap="switchAttrPop">加入购物车</view>
+      <view class="bg-red submit" bindtap="switchAttrPop">立即订购</view>
+  </view>
+</view>
+<!-- 规格选择界面 -->
+<view class="attr-pop-box" hidden="{{!openAttr}}">
+  <view class="attr-pop">
+    <view class="close" bindtap="closeAttr">
+      <text class="cuIcon-close lg text-gray"></text>
+    </view>
+    <view class="img-info">
+      <image class="img" src="https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg"></image>
+      <view class="info">
+        <view class="topright">
+          <view class="selectClose">
+            <view style="color:#ef5426;">{{selectguige.price}}</view>
+            <image src="/images/close.png" bindtap="handleClose"></image>
+          </view>
+      <view style="margin:10rpx 0;color:#999999;">库存:{{selectguige.store_count}}</view>
+      <view>规格: {{mergeStandard}}</view>
+        </view>
+    </view>
+  </view>
+  <view class="flex" wx:for="{{goods.specification}}" wx:for-index='parentindex' wx:for-item="parent" >
+    <view>
+      <view><text>{{parent.name}}:</text>
+    </view>
+      <view class="productFooter">
+        <ul class="productFooterlist" wx:for="{{parent.values}}"  wx:for-index='childindex' wx:for-item="child">
+            <li data-name="{{child.isShow}}" class="{{child.isShow?'':'noneActive'}} {{subIndex[parentindex]==childindex?'productActive1':'productActive'}}" bindtap="choose_specification" data-parentindex="{{parentindex}}" data-childindex="{{childindex}}" data-pid="{{parent.pid}}" data-childid="{{child.id}}">{{child.name}}</li>
+          </ul>
+        </view>
+        
+    </view>  
+  </view> 
+    <!-- /*计数器*/ -->
+  <view class="number-item">
+      <view class="name">数量</view>
+      <view class="selnum">
+        <view class="cut" bindtap="cutNumber">-</view>
+        <input value="{{number}}" class="number" disabled="true" type="number" />
+        <view class="add" bindtap="addNumber">+</view>
+      </view>
+    </view>
+</view>  
+</view>
+
+
+  <!-- <view>
+      <view wx:for="{{goods.}}" wx:for-item="parent" wx:if="{{parent.is_parent==1}}" >
+        <view><text>{{parent.spec_name}}:</text></view>
+      <view class="biaoqian" wx:for="{{goods.sku_biao}}">
+        <view class="cu-tag radius" data-index='{{parent.spec_id}}' data-id='{{item.spec_id}}' wx:if="{{item.p_spec_id==parent.spec_id}}" bindtap="sku_choose">{{item.spec_name}}</view>
+      </view></view>  
+    </view>-->
+
+
+
