@@ -1,13 +1,14 @@
 {
-  "pages": [
-    "pages/index/index",
-    "pages/logs/logs",
-    "pages/about/login/login",
-    "pages/about/wallet/wallet",
-    "pages/about/point/point",
-    "pages/about/personinfo/personinfo",
-    "pages/basics/search/search"
-  ],
+      "pages": [
+        "pages/index/index",
+        "pages/about/login/login",
+        "pages/about/wallet/wallet",
+        "pages/about/point/point",
+        "pages/about/logistics/logistics",
+        "pages/about/personinfo/personinfo",
+        "pages/about/collect/collect",
+        "pages/basics/search/search"
+      ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
